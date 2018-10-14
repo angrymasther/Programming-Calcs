@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="master.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1><center>Programming Calcs</center></h1>
+    </header>
+    <center>
+      <section>
+        <select id="operacion">
+          <option id="nada">Elegir operación</option>
+          <option id="BinToDec">Binario a decimal</option>
+          <option id="DecToBin">Decimal a binario</option>
+          <option id="HexToBin">Hexadecimal a binario</option>
+          <option id="HexToDec">Hexadecimal a decimal</option>
+
+        </select>
+        <input type="text" id="val1" value="">
+        <button onclick="operar()">operar</button>
+        <br><input id="article" value="">
+      </section>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+#article{
+  width: 500px;
+}
+button{
+  background: #42009C;
+  border:solid #42009C 5px;
+  border-radius: 5px;
+  color: white;
+  width:100px;
+  box-shadow: 2px 2px #27005C;
+  margin:10px;
+  margin-top: 0;
+}
+button:active{
+  background: #35007D;
+  border:solid #35007D 5px;
+  box-shadow: 0 0;
+}
+header{
+  background: #260961;
+  color:#D2B0FF;
+  font-family:  'Ubuntu';
+  font-size: 40px;
+  padding-bottom: 10px;
+  border-bottom: solid 5px #5C00ED;
+}
+@media only screen and (max-width:600px) {
+
+  #article{
+    margin:10px;
+    width:60%;
+  }
+  button{
+    margin:10px;
+    width:60%;
+  }
+  header{
+    font-size: 100%;
+  }
+  section{
+    width:100%;
+  }
+  input{
+    margin:10px;
+    width:60%;
+  }
+  select{
+    margin:10px;
+    width:60%;
+  }
+
+}
+section{
+  padding:20px;
+}
