@@ -62,6 +62,53 @@ function HexToBin(val1) {
   return binario;
 }
 
+function BinToHex(val1) { //BUCLE INFINITO!!!!!!!!
+  var hexbin = [
+      ['0000', '0'],
+      ['0001', '1'],
+      ['0010', '2'],
+      ['0011', '3'],
+      ['0100', '4'],
+      ['0101', '5'],
+      ['0110', '6'],
+      ['0111', '7'],
+      ['1000', '8'],
+      ['1001', '9'],
+      ['1010', 'A'],
+      ['1011', 'B'],
+      ['1100', 'C'],
+      ['1101', 'D'],
+      ['1110', 'E'],
+      ['1111', 'F'],
+  ];
+  var hexadecimal = '';
+  var cuarteto = '';
+  var binario = val1;
+  var i = 0;
+  while (i < binario.length) {
+    for (i; i < i + 4; i++) {
+      if (binario.length > i) {
+        break;
+      }
+
+      cuarteto += binario.charAt(i);
+    }
+
+    for (var ii = 0; ii < hexbin.length; ii++) {
+      if (binario.length > i) {
+        break;
+      }
+
+      if (cuarteto == hexbin[i][0]) {
+        cuarteto = '';
+        hexadecimal += hexbin[i][0];
+      }
+    }
+  }
+
+  return hexadecimal;
+}
+
 function operar() {
   val1 = document.getElementById('val1').value;
   if (document.getElementById('DecToBin').selected) {
@@ -82,6 +129,11 @@ function operar() {
   if (document.getElementById('HexToDec').selected) {
     var binario = HexToBin(val1);
     var resultado = BinToDec(binario);
+    document.getElementById('article').value = resultado;
+  }
+
+  if (document.getElementById('BinToHex').selected) {
+    var resultado = BinToHex(val1);
     document.getElementById('article').value = resultado;
   }
 }
